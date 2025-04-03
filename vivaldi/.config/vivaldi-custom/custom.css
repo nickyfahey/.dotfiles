@@ -3,13 +3,12 @@
     display: none;
 }
 
-/* Lower tabs */
+/* Add some padding above the tabs */
 .tab-strip {
     margin-top: 25px !important;
 }
 
 /* Gradient background */
-
 #browser {
     background-image: linear-gradient(10deg, var(--colorHighlightBg), var(--colorBg)) !important;
 }
@@ -37,10 +36,6 @@
     overflow-y: visible !important;
 }
 
-:not(.ui-transparent-tabs).color-behind-tabs-on .tab:not(.active) {
-    background-color: var(--colorAccentBg) !important;
-}
-
 /* Get rid of mini-tab styling */
 
 #tabs-container .tab.tab-small.tab-mini .tab-header {
@@ -61,6 +56,10 @@
 
 :not(.ui-transparent-tabs).color-behind-tabs-on .tab {
     background-color: var(--colorAccentBgFadedMore) !important;
+}
+
+:not(.ui-transparent-tabs).color-behind-tabs-on .tab:not(.active) {
+    background-color: var(--colorAccentBg) !important;
 }
 
 .color-behind-tabs-on .tab-wrapper:hover .tab:not(.active) {
