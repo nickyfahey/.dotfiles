@@ -1,0 +1,12 @@
+[icons]
+code-oss = ""
+kitty = ""
+Vivaldi-stable = ""
+obsidian = ""
+calibre-gui = ""
+calibre-ebook-viewer = ""
+nemo = ""
+"org.inkscape.Inkscape" = ""
+
+[options]
+no_icon_names = true

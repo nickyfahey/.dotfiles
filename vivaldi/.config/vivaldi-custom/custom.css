@@ -1,0 +1,82 @@
+/* Hide the title bar */
+#header {
+    display: none;
+}
+
+/* Lower tabs */
+.tab-strip {
+    margin-top: 25px !important;
+}
+
+/* Gradient background */
+
+#browser {
+    background-image: linear-gradient(10deg, var(--colorHighlightBg), var(--colorBg)) !important;
+}
+
+/* Auto hide vertical tab bar */
+
+.tabbar-wrapper,
+.tabbar-wrapper #tabs-tabbar-container {
+    width: 32px !important;
+    transition: width 0.25s;
+}
+
+.tab-position {
+    transition: width 0.25s;
+}
+
+.tabbar-wrapper:hover .tab-position {
+    width: 300px !important;
+    --Width: 295px !important;
+    transition: width 0.25s;
+}
+
+#tabs-container.left .resize {
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+}
+
+:not(.ui-transparent-tabs).color-behind-tabs-on .tab:not(.active) {
+    background-color: var(--colorAccentBg) !important;
+}
+
+/* Get rid of mini-tab styling */
+
+#tabs-container .tab.tab-small.tab-mini .tab-header {
+    padding-left: 6px !important;
+}
+
+#tabs-container .tab.tab-small.tab-mini .tab-header .stack-counter,
+#tabs-container .tab.tab-small.tab-mini .tab-header .title,
+.tab:hover.tab-mini:not(.button-off).active .favicon {
+    display: inline;
+}
+
+.linux .tab .title {
+    text-overflow: ellipsis;
+}
+
+/* Remove tab transparency */
+
+:not(.ui-transparent-tabs).color-behind-tabs-on .tab {
+    background-color: var(--colorAccentBgFadedMore) !important;
+}
+
+.color-behind-tabs-on .tab-wrapper:hover .tab:not(.active) {
+    background-color: var(--colorAccentBgFadedMost) !important;
+}
+
+/* Tab panel transparency isn't working for some reason */
+
+.tabbar-wrapper {
+    background-color: #00000054 !important;
+}
+
+/* TODO workspace switcher */
+/* TODO remove edge drag cursor change */
+/* TODO accordion 
+    - accordion-toggle-arrow on hover
+    - accordion when minimised
+    - accordion icons move slightly on hovering tab panel
+*/

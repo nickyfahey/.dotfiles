@@ -1,0 +1,102 @@
+# Default config for sway
+#
+# Copy this to ~/.config/sway/config and edit it to your liking.
+#
+# Read `man 5 sway` for a complete reference.
+
+
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec hash dbus-update-activation-environment 2>/dev/null && \
+     dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+for_window {
+    # xwayland
+    [shell="xwayland"] title_format "[XWayland] %title"
+    #[shell="xwayland"] border normal
+
+    # generic popups
+    [window_role="pop-up"] floating enable
+    [window_role="bubble"] floating enable
+    [window_role="dialog"] floating enable
+    [window_type="dialog"] floating enable
+
+    # megasync
+    [class="MEGAsync" instance="megasync"] floating enable
+    [class="MEGAsync" instance="megasync"] move position cursor, move down 35
+
+    # sweethome3d's 3d view window
+    [class="com-eteks-sweethome3d-SweetHome3D" instance="com-eteks-sweethome3d-SweetHome3D" title=".* Sweet Home 3D" floating]  floating disable, resize set width 30, dim_inactive 0
+
+    [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+}
+
+### Appearance
+
+font monospace bold 12
+
+# borders and gaps
+default_border pixel 7
+default_floating_border pixel 1
+titlebar_border_thickness 2
+smart_borders on
+# smart_gaps on
+
+gaps {
+    inner 7
+    # remove outer gaps on all sides adjacent to the screen edge:
+    right -7
+    left -7
+    bottom -7
+}
+
+# window corner radius in px
+# corner_radius 7
+
+# Window background blur
+blur off
+blur_xray off
+blur_passes 2
+blur_radius 5
+
+shadows off
+shadows_on_csd off
+shadow_blur_radius 20
+shadow_color #0000007F
+
+# inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
+default_dim_inactive 0.5
+dim_inactive_colors.unfocused #000000FF
+dim_inactive_colors.urgent #900000FF
+
+# Move minimized windows into Scratchpad (enable|disable)
+scratchpad_minimize disable
+
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+output * bg ~/.config/sway/bg.jpg fill
+
+
+
+### Output configuration
+#
+# Example configuration:
+#
+#   output HDMI-A-1 resolution 1920x1080 position 1920,0
+#
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+### Idle configuration
+#
+# Example configuration:
+#
+# exec swayidle -w \
+#          timeout 300 'swaylock -f -c 000000' \
+#          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+#          before-sleep 'swaylock -f -c 000000'
+#
+# This will lock your screen after 300 seconds of inactivity, then turn off
+# your displays after another 300 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+
+include ~/.config/sway/config.d/*
+include /etc/sway/config.d/*
