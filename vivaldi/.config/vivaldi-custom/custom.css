@@ -36,6 +36,21 @@
     overflow-y: visible !important;
 }
 
+/* Fit workspace switcher to tab bar */
+
+.button-toolbar.workspace-popup.tabbar-workspace-button {
+    width: 32px !important;
+}
+
+.tabbar-workspace-button>button {
+    display: block !important;
+}
+
+.tabbar-workspace-button .button-title,
+.tabbar-workspace-button .button-toolbar-menu-indicator {
+    display: none !important;
+}
+
 /* Get rid of mini-tab styling */
 
 #tabs-container .tab.tab-small.tab-mini .tab-header {
@@ -72,7 +87,6 @@
     background-color: #00000054 !important;
 }
 
-/* TODO workspace switcher */
 /* TODO remove edge drag cursor change */
 /* TODO accordion 
     - accordion-toggle-arrow on hover
