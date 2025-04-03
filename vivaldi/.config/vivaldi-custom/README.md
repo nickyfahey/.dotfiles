@@ -1,3 +1,5 @@
+# How to Add Custom CSS to Vivaldi
+
 - Open [vivaldi://experiments](vivaldi://experiments)
 	- Enable "Allow for using CSS modifications".
 - Open Appearance section in settings.
