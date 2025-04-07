@@ -1,4 +1,4 @@
-#.dotfiles
+# .dotfiles
 
 - battery-monitor: a simple script that beeps when the battery is low
 - [i3wsr](https://github.com/roosta/i3wsr) (i3 workspace renamer): adds open windows' name/icon to the workspace name. Despite the name it also works with sway.
