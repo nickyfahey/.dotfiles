@@ -7,4 +7,5 @@
 	- Place your CSS files inside this folder.
 - Restart Vivaldi to see them in effect.
 
-- [Inspector](vivaldi:inspect/#apps)
+- To inspect the browser itself goto [vivaldi:inspect/#apps](vivaldi:inspect/#apps) and click `inspect` under `Vivaldi
+chrome-extension://.../window.html`.
