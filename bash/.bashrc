@@ -5,13 +5,17 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls -a --color=auto'
-alias ll='ls -la --color=auto'
-alias grep='grep --color=auto'
-PS1='\e[01;36m\w >\e[m '
+BOLD="\[$(tput bold)\]"
+COLOR="\[$(tput setaf 14)\]"
+RESET="\[$(tput sgr0)\]"
+PS1="\n${BOLD}${COLOR}\w\n>${RESET} "
 
 export PATH="/home/nicky/bin:/home/nicky/.cargo/bin:$PATH"
 export MAKEFLAGS="--jobs=$(nproc)"
+
+alias ls='ls -a --color=auto'
+alias ll='ls -la --color=auto'
+alias grep='grep --color=auto'
 
 #pacman
 alias pm-rm='sudo pacman -Rs'
