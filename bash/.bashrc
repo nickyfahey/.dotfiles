@@ -23,6 +23,8 @@ alias pm-search='pacman -Q | grep'
 alias pm-info='pacman -Qi'
 alias pmr-search='pacman -Ss'
 alias pmr-file='pacman -F'
+alias pm-orphlist='pacman -Qdtq'
+alias pm-orphrm='sudo pacman -Rs $(pacman -Qdtq)'
 
 alias power='powerprofilesctl'
 alias power-saver='powerprofilesctl set power-saver'
