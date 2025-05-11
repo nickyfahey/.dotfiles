@@ -7,6 +7,7 @@ calibre-gui = ""
 calibre-ebook-viewer = ""
 nemo = ""
 "org.inkscape.Inkscape" = ""
+com-eteks-sweethome3d-SweetHome3D = ""
 
 [options]
 no_icon_names = true
