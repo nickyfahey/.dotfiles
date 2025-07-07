@@ -34,6 +34,7 @@
 #tabs-container.left .resize {
     overflow-x: visible !important;
     overflow-y: visible !important;
+    max-height: 100% !important;
 }
 
 /* Fit workspace switcher to tab bar */
