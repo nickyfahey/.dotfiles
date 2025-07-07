@@ -17,7 +17,7 @@
 
 .tabbar-wrapper,
 .tabbar-wrapper #tabs-tabbar-container {
-    width: 32px !important;
+    width: 33px !important;
     transition: width 0.25s;
 }
 
