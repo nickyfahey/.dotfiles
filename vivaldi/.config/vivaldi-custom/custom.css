@@ -96,6 +96,4 @@
 }
 
 /* TODO remove edge drag cursor change */
-/* TODO accordion 
-    - accordion-toggle-arrow on hover
-*/
+/* TODO fix accordion arrow so that it does not disappear on tab-bar hover */
