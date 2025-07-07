@@ -40,6 +40,10 @@
     overflow-y: visible !important;
 }
 
+#browser:not(.alt-tabs) .tab:hover.tab-small:not(.tab-mini).active .title {
+    display: inline !important;
+}
+
 /* Fit workspace switcher to tab bar */
 
 .button-toolbar.workspace-popup.tabbar-workspace-button {
