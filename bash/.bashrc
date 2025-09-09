@@ -32,3 +32,4 @@ alias power-balance='powerprofilesctl set balanced'
 alias power-game='powerprofilesctl set performance'
 
 alias gpuwatch='watch -n 1 cat /sys/class/drm/card1/device/power/runtime_status'
+alias pw-fix='pw-metadata -n settings 0 clock.force-rate 48000 && pw-metadata -n settings 0 clock.force-quantum 500'
