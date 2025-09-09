@@ -21,8 +21,7 @@ for_window {
     [window_type="dialog"] floating enable
 
     # megasync
-    [class="MEGAsync" instance="megasync"] floating enable
-    [class="MEGAsync" instance="megasync"] move position cursor, move down 35
+    [title="MEGAsync"] floating enable, move position cursor, move down 35
 
     # sweethome3d's 3d view window
     [class="com-eteks-sweethome3d-SweetHome3D" instance="com-eteks-sweethome3d-SweetHome3D" title=".* Sweet Home 3D" floating]  floating disable, resize set width 30, dim_inactive 0
@@ -64,7 +63,7 @@ shadow_blur_radius 20
 shadow_color #0000007F
 
 # inactive window fade amount. 0.0 = no dimming, 1.0 = fully dimmed
-default_dim_inactive 0.5
+default_dim_inactive 0.8
 dim_inactive_colors.unfocused #000000FF
 dim_inactive_colors.urgent #900000FF
 
